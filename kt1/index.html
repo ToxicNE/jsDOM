@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Создание таблицы с помощью JavaScript</title>
+	<title>Создание таблицы с помощью js</title>
 	<style>
 		table, th, td {
 			border: 1px solid black;
@@ -18,13 +18,13 @@
 	<table id="myTable"></table>
 
 	<script>
-		// Создаем массив с 30 случайными числами от 0 до 99
+		
 		var arr = [];
 		for (var i = 0; i < 30; i++) {
 			arr.push(Math.floor(Math.random() * 100));
 		}
 
-		// Создаем таблицу 5x6 и заполняем ее числами из массива
+		
 		var table = document.getElementById("myTable");
 		var row, cell, count = 0;
 		for (var i = 0; i < 5; i++) {
