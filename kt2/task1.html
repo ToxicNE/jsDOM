@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Котятки</title>
+  <script src="https://cats.petiteweb.dev/simple/assets/cats.js"></script>
+</head>
+<body>
+    <div id="cat-info">
+      </div>
+      
+      <script>
+        fetch('https://cats.petiteweb.dev/api/cats')
+          .then(response => response.json())
+          .then(cats => {
+            const catInfo = document.querySelector('#cat-info');
+            
+            const catListItems = cats.map(cat => `<li>${cat.name}</li>`).join('');
+            
+            catInfo.innerHTML = `<ul>${catListItems}</ul>`;
+          });
+      </script>
+      
+</body>
+</html>
