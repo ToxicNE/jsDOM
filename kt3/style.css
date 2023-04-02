@@ -1,0 +1,12 @@
+#menu ul {
+    display: none;
+  }
+  
+  #menu li:hover > ul {
+    display: block;
+  }
+  
+  #menu ul.show {
+    display: block;
+  }
+  
