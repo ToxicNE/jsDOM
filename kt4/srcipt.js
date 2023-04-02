@@ -30,6 +30,6 @@ document.addEventListener('mouseup', (event) => {
 document.addEventListener('DOMContentLoaded', function() {
   const slider = document.querySelector('.slider');
   const thumb = slider.querySelector('.thumb');
-  // остальной код для слайдера
+  
 });
 
