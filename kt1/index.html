@@ -1,15 +1,45 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-<head> 
-    <meta charset="UTF-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link rel="stylesheet" href="style.css"> 
-    <script src="color.js"> </script> 
-    <script src="script.js"> </script> 
-    <title>Document</title> 
-</head> 
-<body> 
-    <table id="table" class="table"></table>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Создание таблицы с помощью JavaScript</title>
+	<style>
+		table, th, td {
+			border: 1px solid black;
+			border-collapse: collapse;
+			padding: 5px;
+		}
+		td.orange {
+			background-color: orange;
+		}
+	</style>
+</head>
+<body>
+	<table id="myTable"></table>
+
+	<script>
+		// Создаем массив с 30 случайными числами от 0 до 99
+		var arr = [];
+		for (var i = 0; i < 30; i++) {
+			arr.push(Math.floor(Math.random() * 100));
+		}
+
+		// Создаем таблицу 5x6 и заполняем ее числами из массива
+		var table = document.getElementById("myTable");
+		var row, cell, count = 0;
+		for (var i = 0; i < 5; i++) {
+			row = document.createElement("tr");
+			for (var j = 0; j < 6; j++) {
+				cell = document.createElement("td");
+				cell.textContent = arr[count];
+				if (arr[count] >= 50) {
+					cell.classList.add("orange");
+				}
+				row.appendChild(cell);
+				count++;
+			}
+			table.appendChild(row);
+		}
+	</script>
 </body>
 </html>
