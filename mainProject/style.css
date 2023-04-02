@@ -1,0 +1,248 @@
+/* Общие стили для всех страниц */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #f1c40f;
+}
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    font-size: 2em;
+    margin-top: 0;
+}
+
+/* Стили для главной страницы */
+
+.hero {
+    background-image: url("hero-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 4em;
+    text-shadow: 2px 2px #000;
+}
+
+.hero p {
+    font-size: 1.5em;
+    text-shadow: 2px 2px #000;
+}
+
+.hero button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: none;
+    background-color: #f1c40f;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+    background-color: #e67e22;
+}
+
+/* Стили для страницы продуктов */
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product {
+    width: 30%;
+    margin: 1%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.product:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+.product h3 {
+    margin: 10px;
+    font-size: 1.5em;
+}
+
+.product p {
+    margin: 10px;
+}
+
+/* Стили для страницы корзины */
+
+.cart {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cart-item {
+    width: 100%;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.cart-item:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.cart-item img {
+    width: 40%;
+    height: auto;
+    float: left;
+    margin-right: 20px;
+}
+
+.cart-item h3 {
+    margin-top: 0;
+}
+
+.cart-item p {
+    margin-bottom: 10px;
+}
+
+.cart-item button {
+    display: block;
+    background-color: #008CBA;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cart-item button:hover {
+background-color: #005F6B;
+}
+
+/* Корзина */
+
+.cart-container {
+margin: 50px auto;
+max-width: 1200px;
+}
+
+.cart-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 20px;
+}
+
+.cart-header h2 {
+margin: 0;
+}
+
+.cart-total {
+font-size: 24px;
+font-weight: bold;
+}
+
+.cart-items {
+display: flex;
+flex-wrap: wrap;
+}
+
+.cart-summary {
+background-color: #f2f2f2;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+margin-left: 20px;
+flex: 1;
+}
+
+.cart-summary h3 {
+margin-top: 0;
+}
+
+.cart-summary p {
+margin-bottom: 10px;
+}
+
+.cart-summary .total {
+font-size: 24px;
+font-weight: bold;
+}
+
+.cart-summary button {
+background-color: #008CBA;
+color: #fff;
+border: none;
+padding: 10px 20px;
+margin-top: 10px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.cart-summary button:hover {
+background-color: #005F6B;
+}
+
+/* Стили для кнопки "Вверх" */
+
+.top-btn {
+position: fixed;
+right: 50px;
+bottom: 50px;
+display: none;
+background-color: #008CBA;
+color: #fff;
+border: none;
+padding: 10px 20px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.top-btn:hover {
+background-color: #005F6B;
+}    
