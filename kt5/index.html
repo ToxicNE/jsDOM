@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Банковская карта</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js"></script>
+  </head>
+  <body>
+    <div class="form-wrapper">
+      <form id="card-form">
+        <div class="form-group">
+          <label for="bank-name">Название банка:</label>
+          <input type="text" id="bank-name" name="bank-name" required>
+        </div>
+        <div class="form-group">
+          <label for="payment-system">Тип платежной системы:</label>
+          <select id="payment-system" name="payment-system" required>
+            <option value="visa">Visa</option>
+            <option value="mastercard">Mastercard</option>
+            <option value="american-express">American Express</option>
+            <option value="discover">Discover</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="card-number">Номер карты:</label>
+          <input type="text" id="card-number" name="card-number" minlength="16" maxlength="16" pattern="\d{16}" required>
+        </div>
+        <div class="form-group">
+          <label for="cardholder-name">Имя держателя карты:</label>
+          <input type="text" id="cardholder-name" name="cardholder-name" required>
+        </div>
+        <div class="form-group">
+          <label for="expiration-date">Месяц и год окончания:</label>
+          <input type="month" id="expiration-date" name="expiration-date" required>
+        </div>
+        <button type="submit">Добавить</button>
+      </form>
+      <div class="card-preview">
+        <div class="card-front"></div>
+        <div class="card-back"></div>
+      </div>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Банк</th>
+          <th>Тип платежной системы</th>
+          <th>Номер карты</th>
+          <th>Имя держателя карты</th>
+          <th>Месяц и год окончания</th>
+        </tr>
+      </thead>
+      <tbody id="card-list"></tbody>
+    </table>
+    
+    <script src="script.js"></script>
+  </body>
+</html>
